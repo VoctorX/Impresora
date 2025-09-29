@@ -105,7 +105,7 @@ _Herramientas y lenguajes utilizados en los proyectos de este repositorio:_
 ## Autor ✒️
 
 * **Victor Cordoba** - *Desarrollador* - [VoctorX](https://github.com/VoctorX)
-* **Gabriel Gomez** - *Desarrollador* - [VoctorX](https://github.com/Git-gaby)
+* **Gabriel Gomez** - *Desarrollador* - [Git-gaby](https://github.com/Git-gaby)
 
 ---
 
