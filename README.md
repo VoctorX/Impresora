@@ -72,22 +72,17 @@ El modelo SaaS democratiza el acceso a tecnología de punta, permitiendo que neg
 
 ### Requisitos Previos
 ```bash
-- Python 3.x
+- Python 3.17
 - Tkinter (incluido con Python)
-- Drivers para impresora COL-POS
+- Impresora USB
 - Lector de códigos de barras USB
 ```
 
 ### Instalación
 ```bash
 # Clonar el repositorio
-git clone [URL_DEL_REPOSITORIO]
+git clone [https://github.com/VoctorX/Impresora]
 
-# Navegar al directorio
-cd sistema-pos
-
-# Instalar dependencias
-pip install -r requirements.txt
 ```
 
 ### Configuración
@@ -110,7 +105,7 @@ _Herramientas y lenguajes utilizados en los proyectos de este repositorio:_
 ## Autor ✒️
 
 * **Victor Cordoba** - *Desarrollador* - [VoctorX](https://github.com/VoctorX)
-* **Gabriel Gomez** - *Desarrollador* - [VoctorX](https://github.com/VoctorX)
+* **Gabriel Gomez** - *Desarrollador* - [VoctorX](https://github.com/Git-gaby)
 
 ---
 
@@ -120,5 +115,10 @@ Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.
 
 ---
 
+## Datos 📄
+
 **Versión**: 1.0  
 **Fecha**: 2025
+
+---
+
