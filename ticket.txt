@@ -1,0 +1,2 @@
+Hola impresora COL-POS!
+Ticket de prueba desde Python.
