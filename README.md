@@ -68,7 +68,7 @@ El modelo SaaS democratiza el acceso a tecnología de punta, permitiendo que neg
 
 ---
 
-## 🚀 Instalación y Uso
+## 🚀 Clonacion y Uso
 
 ### Requisitos Previos
 ```bash
@@ -78,7 +78,7 @@ El modelo SaaS democratiza el acceso a tecnología de punta, permitiendo que neg
 - Lector de códigos de barras USB
 ```
 
-### Instalación
+### Clonación
 ```bash
 # Clonar el repositorio
 git clone [https://github.com/VoctorX/Impresora]
