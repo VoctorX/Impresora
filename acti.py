@@ -3,6 +3,8 @@ from tkinter import ttk, messagebox
 import os
 from datetime import datetime
  
+Ruta_del_Logo="impresora.ico"
+
 # Base de datos en memoria (lista de diccionarios)
 productos = []
 contador_id = 1
@@ -146,7 +148,7 @@ def imprimir_ticket():
  
     contenido = []
     contenido.append(f"Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-    contenido.append("== TIENDA TECNOLOGICA ==\n")
+    contenido.append("== TIENDA ==\n")
     contenido.append(f"ID: {producto_id}\n")
     contenido.append(f"Producto: {nombre}\n")
     contenido.append(f"Categoria: {categoria}\n")
@@ -164,12 +166,38 @@ def imprimir_ticket():
         messagebox.showinfo("Exito", "Ticket enviado a la impresora")
     except Exception as e:
         messagebox.showerror("Error", f"No se pudo imprimir: {e}")
+
+# -------------------------------
+# Funciones para el menú
+# -------------------------------
+def salir():
+    """
+    Cierra la aplicación
+    """
+    ventana.quit()
+
+def mostrarAyuda():
+    """
+    Muestra ventana de ayuda
+    """
+    messagebox.showinfo("Ayuda", 
+        "CRUD de Productos - Tienda\nEste programa permite gestionar productos:\n"
+        "- Agregar\n- Editar\n- Eliminar\n- Imprimir Ticket"
+    )
+
+def mostrarInfo():
+    """
+    Muestra información acerca del programa
+    """
+    
+    info = "Creado por Victor Cordoba\nVerison 1.0\n29/09/2025"
+    messagebox.showinfo("Acerca de nosotros", info)
  
 # -------------------------------
 # Interfaz Tkinter
 # -------------------------------
 ventana = tk.Tk()
-ventana.title("Tienda Tecnologica - CRUD de Productos")
+ventana.title("Tienda - CRUD de Productos")
 ventana.geometry("1250x500")
  
 frame_form = tk.Frame(ventana)
@@ -215,5 +243,35 @@ for col in columnas:
  
 tabla.pack()
 tabla.bind("<<TreeviewSelect>>", seleccionar_producto)
+
+try:
+    ventana.iconbitmap(Ruta_del_Logo)
+except tk.TclError:
+    print(f"No se pudo cargar el icono desde la ruta: {Ruta_del_Logo}")
+
+# -------------------------------
+# Barra de menú estilo calculadora
+# -------------------------------
+menubar = tk.Menu(ventana)
+
+# Menú Inicio
+menu_inicio = tk.Menu(menubar, tearoff=0)
+menu_inicio.add_command(label="Agregar", command=agregar_producto)
+menu_inicio.add_command(label="Editar", command=editar_producto)
+menu_inicio.add_command(label="Eliminar", command=eliminar_producto)
+menu_inicio.add_command(label="Limpiar", command=limpiar_campos)
+menu_inicio.add_command(label="Imprimir Ticket", command=imprimir_ticket)
+menu_inicio.add_separator()
+menu_inicio.add_command(label="Salir", command=salir)
+menubar.add_cascade(label="Inicio", menu=menu_inicio)
+
+# Menú Ayuda
+menu_ayuda = tk.Menu(menubar, tearoff=0)
+menu_ayuda.add_command(label="Ayuda", command=mostrarAyuda)
+menu_ayuda.add_command(label="Acerca de nosotros", command=mostrarInfo)
+menubar.add_cascade(label="Ayuda", menu=menu_ayuda)
+
+# Asignar el menú a la ventana
+ventana.config(menu=menubar)
  
 ventana.mainloop()
