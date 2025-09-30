@@ -7,7 +7,6 @@ Ruta_del_Logo="impresora.ico"
 
 # Base de datos en memoria (lista de diccionarios)
 productos = []
-contador_id = 1
  
 # -------------------------------
 # Funciones CRUD
